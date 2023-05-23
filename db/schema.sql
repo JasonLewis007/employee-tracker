@@ -2,7 +2,7 @@
 
 DROP DATABASE IF EXISTS employee_DB;
 CREATE DATABASE employee_DB;
-USE employees_DB;
+USE employee_DB;
 
 --Create table department for seeds to populate employee DB
 CREATE TABLE department (
