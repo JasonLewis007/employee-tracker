@@ -1,8 +1,8 @@
 -- SOURCE seeds.sql SECOND AFTER SOURCING schema.sql FIRST
 
-USE employee_DB;
+USE employeesDB;
 
---values to insert into department table
+-- inserts into department table
 INSERT INTO department (name)
 VALUES ("Sales");
 INSERT INTO department (name)
@@ -12,9 +12,8 @@ VALUES ("Finance");
 INSERT INTO department (name)
 VALUES ("Legal");
 
-
---values to insert into role table
-
+-- inserts into role table
+-- no camelCase for SQL...
 INSERT INTO role (title, salary, department_id)
 VALUES ("Sales Lead", 100000, 1);
 INSERT INTO role (title, salary, department_id)
@@ -26,21 +25,20 @@ VALUES ("Accountant", 125000, 3);
 INSERT INTO role (title, salary, department_id)
 VALUES ("Legal Team Lead", 250000, 4);
 
---values to insert into employee table
-
+-- used names from Mockup, except Kunal Singh (no account manager)
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Sharon", "Peters", 1, 3);
+VALUES ("John", "Doe", 1, 3);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Kayla", "Choo", 2, 1);
+VALUES ("Mike", "Chan", 2, 1);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Jon", "Plants", 3, null);
+VALUES ("Ashley", "Rodriguez", 3, null);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Dab", "Stein", 4, 3);
+VALUES ("Kevin", "Tupik", 4, 3);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("John", "Wick", 5, null);
+VALUES ("Malia", "Brown", 5, null);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("John", "Swartz", 2, null);
+VALUES ("Sarah", "Lourd", 2, null);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Harry", "Potter", 4, 7);
+VALUES ("Tom", "Allen", 4, 7);
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Mike", "Tomlin", 2, 1);
+VALUES ("Nick", "Saban", 2, 1);

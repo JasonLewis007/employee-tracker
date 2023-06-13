@@ -1,17 +1,16 @@
 -- SOURCE SCHEMA.SQL FIRST - BEFORE SEEDS.SQL
 
-DROP DATABASE IF EXISTS employee_DB;
-CREATE DATABASE employee_DB;
-USE employee_DB;
+DROP DATABASE IF EXISTS employeesDB;
+CREATE DATABASE employeesDB;
+USE employeesDB;
 
---Create table department for seeds to populate employee DB
 CREATE TABLE department (
   id INT NOT NULL AUTO_INCREMENT,
   name VARCHAR(30) NULL,
   PRIMARY KEY (id)
 );
 
--- Create tabel role for seeds to populate employee DB
+-- could also use TINYTEXT with VARCHAR NULL, sets 255 character limit
 CREATE TABLE role (
   id INT NOT NULL AUTO_INCREMENT,
   title VARCHAR(30) NULL,
@@ -19,7 +18,7 @@ CREATE TABLE role (
   department_id INT NULL,
   PRIMARY KEY (id)
 );
--- Create tabel role for employee to populate employee DB
+
 CREATE TABLE employee (
   id INT NOT NULL AUTO_INCREMENT,
   first_name VARCHAR(30) NULL,
