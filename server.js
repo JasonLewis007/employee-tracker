@@ -289,8 +289,8 @@ function promptEmployeeRole(employeeChoices, roleChoices) {
     });
 }
 
-// BREAKING CODE UP HERE AGAIN TO TEST NEW FUNCTIONS
-// ALL WORKING AS INTENDED
+
+
 
 function addRole() {
   var query =
@@ -317,7 +317,6 @@ function addRole() {
 }
 
 
-// will prompt user to add role when called inside the addRole() function
 function promptAddRole(departmentChoices) {
   inquirer.prompt([
       {
@@ -338,7 +337,7 @@ function promptAddRole(departmentChoices) {
       },
     ])
 
-    // may test with this.title and this.salary and this.departmentId, because -this- refers to the object
+  
     .then(function (answer) {
       var query = `INSERT INTO role SET ?`
 
